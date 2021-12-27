@@ -7,15 +7,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">User Auth</a>
-        
-      </div>
-    </nav>
+    <%= render partial: "shared/navbar" %>
     <div id="main-container" class="container">
       <%= yield %>
     </div>
